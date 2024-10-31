@@ -1,0 +1,143 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.header {
+    background-color: #f3e8de;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.header-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.header-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+
+.header-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Ad space styling */
+.ad-space {
+    text-align: center;
+    font-size: 1em;
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Semester header */
+.semester-header {
+    text-align: center;
+    background-color: #f7c5a0;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Notes table */
+.notes-table {
+    width: 90%;
+    margin: 0 auto 30px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notes-table th, .notes-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.notes-table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.notes-table td a {
+    color: #8B4513; /* Dark brown color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.notes-table td a:hover {
+    color: #5A3220; /* Darker shade of brown */
+}
+
+.notes-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.download-icon {
+    width: 24px;
+    height: 24px;
+    fill: #007bff;
+    transition: transform 0.2s, fill 0.2s; /* Added transform property */
+}
+
+.download-icon:hover {
+    fill: #0056b3;
+    transform: scale(1.1); /* Slight zoom animation */
+}
+
+/* Popup styling */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.popup.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .notes-table th, .notes-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .header-icons img {
+        width: 28px;
+        height: 28px;
+    }
+}

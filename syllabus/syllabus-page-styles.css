@@ -1,0 +1,188 @@
+/* Base styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #f3e8de;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.search-bar {
+    margin-top: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Card grid layout - automatic grid for large screens */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Automatically adjust columns on large screens */
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Card Design */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Glow effect on hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.7); /* Glow effect */
+}
+
+.card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain; /* Ensure the image fits within the given dimensions without distortion */
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Footer styling */
+footer {
+    background-color: #f3e8de;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+/* Media Query for smaller screens (tablets and mobile phones) */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* Always display 2 columns on small screens */
+    }
+
+    .card img {
+        width: 100px; /* Adjust image size for smaller screens */
+        height: 100px;
+    }
+
+    .card p {
+        font-size: 16px; /* Adjust text size for smaller screens */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Adjust header size for smaller screens */
+    }
+
+    .search-bar input {
+        font-size: 14px;
+        width: 90%; /* Adjust search bar width for smaller screens */
+    }
+}
+
+/* Media Query for very small screens (compact mobile) */
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns on compact screens */
+    }
+
+    .card {
+        padding: 15px; /* Reduce padding inside the cards */
+    }
+
+    .card img {
+        width: 80px; /* Further reduce the image size */
+        height: 80px;
+    }
+
+    .card p {
+        font-size: 14px; /* Make text even smaller for compact screens */
+    }
+
+    header h1 {
+        font-size: 1.2em; /* Reduce the header size for compact screens */
+    }
+
+    .search-bar input {
+        font-size: 12px;
+        width: 95%; /* Make search bar width adjust further */
+    }
+
+    footer {
+        font-size: 0.8em; /* Reduce footer text size */
+    }
+}
+
+/* Search bar styling */
+/* Search bar styling */
+/* Search bar container */
+/* Search bar container */
+.search-bar {
+    position: relative;
+    width: 80%;
+    max-width: 500px; /* Keep the width consistent */
+    margin: 20px auto; /* Center the search bar */
+}
+
+/* Input field styling (simple, no rounded corners) */
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px; /* Basic padding */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Slight rounding for a simple design */
+    font-size: 16px;
+    box-shadow: none; /* Remove any shadow */
+    transition: border-color 0.3s ease; /* Focus effect */
+}
+
+/* Input focus style */
+.search-bar input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Simple Search Icon */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Position icon closer to the left */
+    transform: translateY(-50%);
+    fill: #666; /* Standard color for the icon */
+    pointer-events: none; /* Ensure the icon does not block text input */
+    font-size: 16px;
+}
+
+
+
+
