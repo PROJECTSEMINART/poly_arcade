@@ -1,143 +1,93 @@
-/* Base styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    padding: 0;
+    background-color: #f4f4f4;
 }
-
-.header {
+header {
     background-color: #f3e8de;
+    color: #333;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #ddd;
 }
-
-.header h1 {
+h1 {
     margin: 0;
     font-size: 2em;
-    color: #333;
 }
-
-.header-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+main {
+    padding: 20px;
 }
-
-.header-icons img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.2s;
-}
-
-.header-icons img:hover {
-    transform: scale(1.1);
-}
-
-/* Ad space styling */
-.ad-space {
-    text-align: center;
-    font-size: 1em;
-    margin: 10px 0;
-    color: #666;
-}
-
-/* Semester header */
-.semester-header {
-    text-align: center;
-    background-color: #f7c5a0;
-    color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-/* Notes table */
-.notes-table {
-    width: 90%;
-    margin: 0 auto 30px auto;
-    border-collapse: collapse;
+/* Semester section styling */
+.semester {
     background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.notes-table th, .notes-table td {
-    padding: 12px;
+.semester h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
     text-align: center;
+}
+/* Table styling */
+.notes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.notes-table th, .notes-table td {
+    padding: 12px 15px;
+    text-align: left;
     border-bottom: 1px solid #ddd;
+    font-size: 1em;
 }
-
 .notes-table th {
-    background-color: #333;
-    color: #fff;
-}
-
-.notes-table td a {
-    color: #8B4513; /* Dark brown color */
-    text-decoration: none;
+    background-color: #f2f2f2;
     font-weight: bold;
-    transition: color 0.3s;
 }
-
-.notes-table td a:hover {
-    color: #5A3220; /* Darker shade of brown */
+.notes-table td {
+    font-size: 0.95em;
 }
-
-.notes-table tr:hover {
-    background-color: #f1f1f1;
+.notes-table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
-
+/* Download icon styling */
 .download-icon {
-    width: 24px;
-    height: 24px;
-    fill: #007bff;
-    transition: transform 0.2s, fill 0.2s; /* Added transform property */
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
 }
-
 .download-icon:hover {
-    fill: #0056b3;
-    transform: scale(1.1); /* Slight zoom animation */
+    transform: scale(1.3) rotate(15deg); /* Adds scale and rotation animation on hover */
+    color: #007bff;
 }
-
-/* Popup styling */
-.popup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: linear-gradient(135deg, #00b09b, #96c93d);
-    color: #fff;
-    padding: 15px 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 16px;
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f3e8de;
+    color: #333;
+    font-size: 0.9em;
+    margin-top: 20px;
 }
-
-.popup.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive styling */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .notes-table th, .notes-table td {
-        font-size: 14px;
-        padding: 10px;
+    .semester {
+        padding: 15px;
     }
-
-    .header-icons img {
-        width: 28px;
-        height: 28px;
+    .notes-table th, .notes-table td {
+        padding: 8px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .semester h2 {
+        font-size: 1.4em;
     }
 }
